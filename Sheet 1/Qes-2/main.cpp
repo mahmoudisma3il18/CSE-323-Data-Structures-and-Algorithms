@@ -7,8 +7,10 @@ using namespace std;
 #define TRUE       1
 #define FALSE      0
 
+#define ARRAY_SIZE  4
 
-/*------------------- Global Varibales --------------------------*/
+
+/*------------------- Global Variables --------------------------*/
 
 int *g_dynamicArray = NULL;
 
@@ -32,6 +34,7 @@ void createArrayDynamic()
         i++;
     }
 }
+
 /*--------------------------------------------------------------------------
 Description : This function prints the array
 ----------------------------------------------------------------------------*/
@@ -41,9 +44,61 @@ void printArray(int *array,int size)
     cout<<"Array["<<i<<"] = "<<array[i];
 }
 
+/*--------------------------------------------------------------------------
+Description : Function that takes an array of integers and returns whether it has repeated items
+or not.
+
+Solution 1
+---------------------------------------------------------------------------------*/
+bool isArrayRepeated(int *array,int size) // Time Complexity = O(n^2)
+{
+    for(int i = 0 ; i < size ; i++ )
+        for(int j = 0 ; j < size ; j++)
+        if((i != j) && (array[i] == array[j]) )
+        return TRUE;
+
+    return FALSE;
+}
+
+/*--------------------------------------------------------------------------
+Description : Function that takes an array of integers and returns whether it has repeated items
+or not.
+
+Solution 2
+---------------------------------------------------------------------------------*/
+
+bool isArrayRepeated2(int *array,int size) // Time Complexity = O(n^2) , but less time
+{
+    for(int i = 0 ; i < size-1 ; i++ )
+        for(int j = i+1 ; j < size ; j++)
+        if(array[i] == array[j] )
+        return TRUE;
+
+    return FALSE;
+}
+
+/*--------------------------------------------------------------------------
+Description : Function that takes an array of integers and returns whether it has repeated items
+or not.
+
+Its only works for sorted arrays
+
+Solution 3
+---------------------------------------------------------------------------------*/
+bool isArrayRepeated3(int *array,int size) // Time Complexity = O(n)
+{
+    for(int i = 0 ; i < size -1 ; i++ )
+        if(array[i] == array[i+1])
+        return TRUE;
+
+    return FALSE;
+}
+
 int main()
 {
-createArrayDynamic();
+int array[ARRAY_SIZE] = {1,2,4,3};
+
+cout<<isArrayRepeated2(array,ARRAY_SIZE);
 
     return 0;
 }
