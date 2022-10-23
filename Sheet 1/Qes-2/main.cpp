@@ -7,7 +7,7 @@ using namespace std;
 #define TRUE       1
 #define FALSE      0
 
-#define ARRAY_SIZE  4
+#define SIZE_OF_ARRAY  4
 
 
 /*------------------- Global Variables --------------------------*/
@@ -96,9 +96,9 @@ bool isArrayRepeated3(int *array,int size) // Time Complexity = O(n)
 
 int main()
 {
-int array[ARRAY_SIZE] = {1,2,4,3};
+int array[SIZE_OF_ARRAY] = {1,2,4,3};
 
-cout<<isArrayRepeated2(array,ARRAY_SIZE);
+cout<<isArrayRepeated2(array,SIZE_OF_ARRAY);
 
     return 0;
 }
