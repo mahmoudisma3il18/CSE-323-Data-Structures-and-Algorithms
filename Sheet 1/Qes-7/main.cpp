@@ -25,7 +25,7 @@ void swap(int *x,int *y) // Function to swap elements of array
     *y = temp;
 }
 
-void bubbleSort(int *array,int sizeOfArray) // To sort the array in ascending order
+void bubbleSort(int *array,int sizeOfArray) // To sort the array in ascending order ,Time Complexity O(n^2)
 {
     for(int i = 0 ; i < sizeOfArray -1 ; i++)
         for(int j = 0 ; j < sizeOfArray - i - 1;j++)
