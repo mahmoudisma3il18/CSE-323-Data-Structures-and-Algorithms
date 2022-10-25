@@ -56,7 +56,7 @@ int main()
     int index = binarySearch(array,2,0,5);
 
     if(index == -1)
-        cout<<"Number doesnt exist";
+        cout<<"Number doesn't exist";
     else
     cout<<"Number 5 is found at index : "<<index;
     return 0;
