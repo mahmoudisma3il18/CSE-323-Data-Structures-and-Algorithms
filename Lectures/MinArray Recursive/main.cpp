@@ -3,6 +3,7 @@ Author : Mahmoud Ismail
 Date : 11/10/2022
 */
 #include <iostream>
+#include <stdio.h>
 
 using namespace std;
 
@@ -23,6 +24,7 @@ int minArrayRecursive(int *array,int start,int end)
 int main()
 {
     int array[]={1,8,0,-5};
-    cout << "Min of array : "<< minArrayRecursive(array,0,3)<< endl;
+    //cout << "Min of array : "<< minArrayRecursive(array,0,3)<< endl;
+    printf("%d",sizeof(array));
     return 0;
 }
