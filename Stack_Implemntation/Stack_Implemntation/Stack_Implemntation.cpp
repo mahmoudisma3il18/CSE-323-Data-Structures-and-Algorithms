@@ -106,24 +106,6 @@ private:
 	int size;
 };
 
-class StackInLinkedList
-{
-public:
-	StackInLinkedList();
-	
-
-private:
-	
-};
-
-StackInLinkedList::StackInLinkedList()
-{
-}
-
-StackInLinkedList::~StackInLinkedList()
-{
-}
-
 
 vector <int> removedReaptedItems(vector <int> & arr)
 {
@@ -153,22 +135,8 @@ vector <int> removedReaptedItems(vector <int> & arr)
 
 int main()
 {
-
-	vector<int> arr = { 1, 1, 2, 2, 3, 4, 4, 5 };
-	vector<int> result = removedReaptedItems(arr);
-	for (int i = 0; i < result.size(); i++)
-		cout << result[i];
+	string x = "(}";
+	cout << x[0] +2 << endl;
 	
-	return 0;
-
-	Stack s1,s2;
-	s1.push(5);
-	s1.push(2);
-	s2.push(5);
-	s2.push(2);
-	//s2.push(3);
-
-
-	cout << s1.peek()<<" x  " << s1.isEqaul3(s2) << endl;
 }
 
